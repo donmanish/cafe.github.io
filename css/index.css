@@ -1,0 +1,835 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+header{
+    background-color: rgb(223, 194, 194);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+header .logo img{
+    width: 150px;
+    filter: none;
+}
+
+header figure
+{
+    display: none;
+}
+header figure img
+{
+   width: 50px;
+}
+header nav
+{
+    display: block;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+
+}
+header nav .navlinks a{
+    font-size: 30px;
+    text-decoration: none;
+    margin: 30px;
+    color: #640028;
+;
+    letter-spacing: 5px;
+}
+header nav .navlinks a:hover{
+    color: #FFB200;
+}
+
+/* main */
+main {
+    background:black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+main .banner{
+    background:linear-gradient(30deg , #640028, black);
+    clip-path: circle(180vh at 0% -57vh);
+    width: 100%;
+    height: 122vh;
+   
+}
+main .banner .txt{
+  position: absolute;
+  color:#FFB200;
+  width: 800px;
+  height: 500px;
+  top:30%;
+  left:5%;
+ 
+
+}
+main .banner .txt h1{
+ 
+   font-family: pacifico;
+   font-size: 7em;
+   text-shadow: 2px 2px 10px black;
+}
+main .banner .txt h4{
+    
+    font-size: 5em;
+    line-height: 2em;
+    text-shadow: 4px 4px 10px black;
+}
+main .banner .txt p{
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 2px 2px 10px black;
+}
+main  figure{
+    position: absolute;
+    top:20%;
+    left:45%;
+   
+}
+main  figure img{
+    width: 80%;
+    filter: invert(69%) sepia(57%) saturate(2141%) hue-rotate(360deg) brightness(104%) contrast(103%);
+    box-shadow: inset 0 0 0 0 yellow;
+    animation: cafe 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes cafe {
+    0%{
+        filter: invert(69%) sepia(57%) saturate(2141%) hue-rotate(360deg) brightness(104%) contrast(103%);
+    }
+    50%{
+        filter: invert(33%) sepia(94%) saturate(776%) hue-rotate(177deg) brightness(99%) contrast(90%);
+    }
+    100%{
+        filter: invert(70%) sepia(99%) saturate(7498%) hue-rotate(285deg) brightness(86%) contrast(102%);
+    }
+ 
+}
+main  .banner2 {
+    background: url("/banner/banner.png")  center/contain no-repeat , linear-gradient(100deg ,  #CF6E1C,#FFB200);
+    height: 20vh;
+    width: 100%;
+}
+
+main  .about{
+   background:white;
+   width: 100%;
+   height: 100vh;
+}
+main  .about h1{
+    margin: 80px 0 0 0 ;
+    color: #640028;
+    text-align: center;
+    font-size: 6em;
+    font-family: pacifico;
+}
+main .about .detail{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    
+    
+}
+main .about .detail .txt{
+    
+    width: 140%;
+    padding: 5px;
+    font-size: 50px;
+}
+
+main .about .detail .txt p{
+    padding: 100px 0 0 45px;
+    text-align:justify;
+    color: #FFB200;
+    font-size: 40px;
+}
+main .about .detail .cafe-work{
+    padding: 0 0 0 30px;
+    width: 100%;
+    height: 50vh;
+}
+main .about .detail .cafe-work img{
+    
+    width: 20%;
+    border-radius: 20px;
+    box-shadow: 20px  black;
+}
+main .service {
+    text-align: center;
+    background-color: #640028;
+    width: 100%;
+    height: 100vh;
+}
+main .service  h1{
+    color:white;
+    font-size: 6em;
+    padding: 150px  0 0 0 ;
+    font-family: pacifico;
+    flex-wrap: wrap;
+}
+main .service  .card-page{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    flex-wrap: wrap;
+   padding: 100px 0 50px 0;
+
+}
+main .service  .card-page .page{
+    background: rgba(250, 249, 249,0.45);
+    border-radius: 40px;
+    width: 500px;
+    height:600px;
+    box-shadow: inset 2px 2px 2px 2px  10px #640028;
+}
+main .service  .card-page .page h4{
+    padding: 20px 0 20px 0;
+    font-size: 4em;
+    color:#FFB200 ;
+    background-size: cover ;
+    font-family: sans-serif;
+}
+main .service  .card-page .page p{
+   width: 500px;
+   opacity: 0.5;
+   font-size: 2em;
+   align-items: center;
+   margin: 10px;
+   padding: 10px 10px 40px 10px;
+   color: white;
+   text-shadow: 5px 5px 20px white;
+   font-family: sans-serif;
+}
+main .service  .card-page .page a{
+    background: black;
+    border-radius: 10px;
+    color:#FFB200;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 1em;
+    font: inherit;
+}
+main .service  .card-page .page a:hover{
+    background:#FFB200 ;
+    color: black;
+}
+
+main .contact{
+    width: 100%;
+    height: 100vh;
+}
+main .contact h1{
+    color: white;
+    text-align: center;
+    font-size: 6em;
+    font-family: pacifico; 
+}
+main .contact form{
+    background: url(/asset/aloo.jpg) rgba(0, 0, 255, 0.72)  no-repeat center/cover;
+    background-blend-mode:multiply;
+    width: 80%;
+    height: 70vh;
+   margin: 5% 10% 5% 10%;
+   border-radius: 25px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+main .contact form input[type=email] , input[type=text], textarea, input[type = submit]
+{
+    width: 900px;
+    height: 80px;
+    margin: 5px;
+    font-size: 30px;
+    border-radius: 20px;
+    background: rgba(128, 128, 128, 0.275);
+    outline: none;
+    font-family: sans-serif;
+    border: none;
+    color:white;
+    padding: 0 0 0 30px;
+   
+}
+main .contact  input[type = submit]{
+    background-color: rgba(0, 128, 0, 0.72);
+    border: none;
+    color: white;
+    
+}
+main .contact  input[type = submit]:hover{
+    background-color: rgba(2, 186, 2, 0.72);
+    border: none;
+    color: white;
+}
+main .contact form textarea{
+    height: 500px;
+    padding: 50px 0 0 20px;
+}
+main .contact form textarea::placeholder
+{
+    padding: 9px 0 0 0;
+    
+}
+footer{
+    background-color: black;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+}
+footer .logo{
+    width: 30%;
+}
+footer .logo img{
+    width: 40%;
+    filter: saturate(40%) invert(20%); 
+    margin: 0 0 0 30%;  
+}
+footer .logo  p{
+    color: rgb(89, 88, 88);
+    margin: 10% 0 0 30%; 
+    font-size: 2em;
+}
+footer .work 
+{
+    width: 40%;
+}
+footer .work h1{
+    color: rgb(89, 88, 88);
+    padding: 2px;
+    margin:8% 0 0 40%;
+}
+footer .work p{
+    color:rgb(89, 88, 88);
+    padding: 2px;
+    margin:2% 0 0 40%;
+}
+footer .social {
+    width: 30%;
+}
+footer .social input[type=search]{
+    width: 50%;
+    height: 60px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 2em;
+    padding: 0 0 0 10px;
+    margin:30% 0 0 25%;
+    background-color: rgb(89, 88, 88);
+    color: whitesmoke;
+}
+footer .social .social-links{
+    margin:10% 0 0 44%;
+} 
+footer .social .social-links img{
+    width: 10%;
+    background-color: rgb(89, 88, 88);
+    padding: 10px;
+    margin: 2px;
+}
+footer hr{
+    height: 80%;
+  opacity: 0.2;
+
+}
+/*-------------------------------------------------------------------------------------------------------------- Media query  with mobile-----------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 730px) {
+    
+    header {
+        background-color: rgb(223, 194, 194);
+        
+    }
+    header nav {
+       display:none;
+       position: absolute;
+       background-color: white;
+       width: 100%;
+       top:0;
+       right:0;
+       z-index: 1000;
+    }
+    header nav .navlinks{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+       
+    }
+    header nav .navlinks a{
+        margin: 0;
+       padding: 50px;
+    }
+    header figure {
+        display: inline-block;
+        cursor: pointer;
+    }
+    header nav figure
+    {
+        position: absolute;
+        top:25px;
+        left: 83%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    /* main responsive */
+    main{
+        width: 100%;
+    }
+    main .banner .txt{
+        width: 250px;
+        top:35%;
+        left:center;
+        overflow: hidden;
+        z-index: 8;
+        
+    }
+    main .banner .txt h1{
+        font-size: 2em;
+    }
+    main .banner .txt h4{
+        font-size: 1em;
+    }
+    main .banner .txt p{
+        font-size: 0.8em;
+    }
+    main  figure{
+        top:70%;
+        left:10%;
+    }
+    main  figure img{
+         width: 200px;
+    }
+    main .about{
+        height: 100%;
+    }
+    main .about  h1{
+        font-size: 40px;
+    }
+    main .about .detail{
+        flex-direction: column;
+        width: 100%;
+        height: 80%;
+        display: flex;  
+    }
+    main .about .detail .txt{
+        width: 80%;
+        
+    }
+ 
+    main .about .detail .txt p{
+        padding: 0 0 0 0;
+        font-size: 0.36em;
+        height: 100%;
+        margin: 0 0 0 20%;
+    }
+    main .service {
+        text-align: center;
+        background-color: #640028;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 230vh;
+    }
+    main .service  h1{
+        color:white;
+        font-size: 3em;
+        padding: 20px  0 0 0 ;
+        font-family: pacifico;
+    }
+    main .service  .card-page{
+        display: flex;
+        align-items: center; 
+       
+    }
+    main .service  .card-page .page{
+        background: rgba(250, 249, 249, 0.45);
+        border-radius: 40px;
+        width: 250px;
+        height:350px;
+        box-shadow: inset 2px 2px 2px 2px  10px #640028;
+        margin: 20px;
+    }
+    main .service  .card-page .page h4{
+        padding: 20px 0 0 0;
+        font-size: 1.5em;
+        color:#FFB200 ;
+        background-size: cover ;
+        font-family: sans-serif;
+    }
+    main .service  .card-page .page p{
+        width: 90%;
+        opacity: 0.5;
+        font-size: 1em;
+        font-weight: 500;
+        align-items: center;
+        padding: 0 0 30px 0;
+        color: white;
+        text-shadow: 5px 5px 20px white;
+        font-family: sans-serif;
+     }
+     main .service  .card-page .page a{
+        background: black;
+        border-radius: 10px;
+        color:#FFB200;
+        text-decoration: none;
+        padding: 15px;
+        font-size: 0.1em;
+        font: inherit;
+    }
+    main .service  .card-page .page a:hover{
+        background:#FFB200 ;
+        color: black;
+    }
+    main .contact h1{
+        font-size: 3em;
+        padding: 2px;    
+    }
+    main .contact .form {
+        width: 100%;
+    }
+    main .contact form{
+        background: rgba(0, 0, 255, 0.72) url(/asset/aloo.jpg) no-repeat center/cover;
+        background-blend-mode:multiply;
+        width: 80%;
+        height: 70vh;
+       margin: 5% 10% 5% 10%;
+       border-radius: 25px;
+       display: flex;
+       flex-direction: row;
+    }
+    main .contact form input[type=email] , input[type=text], textarea, input[type = submit]{
+        width: 90%;
+        height: 60px;
+        margin: 5px;
+        font-size: 30px;
+        border-radius: 20px;
+        background: rgba(128, 128, 128, 0.275);
+        outline: none;
+        font-family: sans-serif;
+        border: none;
+        color:white;
+        
+    }
+    main .contact form textarea{
+        height: 50%;
+    }
+    footer{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+       
+    }
+    footer .logo{
+        width: 30%;
+    }
+    footer .logo img{
+        width: 60%;
+        filter: saturate(40%) invert(20%); 
+        margin: 0 0 0 20%;  
+    }
+    footer .logo  p{
+        color: rgb(89, 88, 88);
+        margin: 10% 0 0 30%; 
+        font-size: 0.8em;
+    }
+    footer .work 
+    {
+        width: 40%;
+    }
+    footer .work h1{
+        color: rgb(89, 88, 88);
+        padding: 2px;
+        margin:8% 0 0 15%;
+        font-size: 0.9em;
+    }
+    footer .work p{
+        color: rgb(89, 88, 88);
+        padding: 2px;
+        margin:2% 0 0 15%;
+    }
+    footer .social {
+        width: 30%;
+        
+    }
+    footer .social input[type=search]{
+      display: none;
+    }
+    footer .social .social-links{
+        margin:10% 0 0 45%;
+        display: flex;
+        flex-direction: column;
+    } 
+    footer .social .social-links img{
+        width: 30%;
+        background-color: rgb(89, 88, 88);
+        padding: 0px;
+        margin: 5px;
+    }
+    footer hr{
+        height: 60%;
+        opacity: 0.2;
+    }
+   
+  
+}
+
+
+/*-------------------------------------------------------------------------------------------- media queries for i pad  ---------------------------------------------------------------------------------------------------------------------*/
+
+
+@media only screen and (min-width: 730px) and (max-width: 1200px) {
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+    }
+    header{
+        background-color: rgb(223, 194, 194);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+    }
+    header .logo img{
+        width:200px;
+        filter: none;
+    }
+    header nav .navlinks a{
+        font-size: 30px;
+        text-decoration: none;
+        margin: 20px;
+        color: #640028;
+        letter-spacing: 5px;
+    }
+    header nav .navlinks a:hover{
+        color: #FFB200;
+    }
+
+    /* main event */
+    main {
+        background-color:rgba(12, 0, 0, 0.891);
+        display: flex;
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 0;
+        
+    }
+    main .banner{
+        background-color:#640028 ;
+        clip-path: circle(180vh at 0% -80vh);
+        width: 100%;
+        height: 122vh;
+    }
+    main .banner .txt{
+      position: absolute;
+      color:#FFB200;
+      width: 500px;
+      height: 500px;
+      top:40%;
+      left:5%;
+    
+    }
+    main .banner .txt h1{
+     
+       font-family: pacifico;
+       font-size: 4em;
+    }
+    main .banner .txt h4{
+        
+        font-size: 2em;
+        line-height: 4em;
+    }
+    main .banner .txt p{
+        font-size: 1.5em;
+        color: white;
+    }
+    main  figure{
+        position: absolute;
+        top:80%;
+        left:60%;
+       
+    }
+    main  figure img{
+        width: 80%;
+    }
+    main .about{
+        height: 100%;
+    }
+    main .about  h1{
+        font-size: 6em;
+    }
+    main .about .detail{
+        flex-direction: column;
+        width: 80%;
+        height: 80%;
+        display: flex;  
+    }
+    main .about .detail .txt{
+        width: 100%;
+    }
+    main .about .detail .txt p{
+        font-size: 0.6em;
+        margin: 0 0 0 20%;
+    }
+    main .about .detail .cafe-work {
+        margin: 40px 0 0 22%;
+    }
+    main .service {
+        text-align: center;
+        background-color: #640028;
+        width: 100%;
+        height: 100%;
+    }
+    main .service  h1{
+        color:white;
+        font-size: 6em;
+        padding: 20px  0 0 0 ;
+        font-family: pacifico;
+    }
+    main .service  .card-page{
+        display: flex;
+        align-items: center; 
+        flex-wrap: wrap;
+       
+    }
+    main .service  .card-page .page{
+        background: rgba(250, 249, 249, 0.45);
+        border-radius: 40px;
+        width: 80%;
+        height:auto;
+        box-shadow: inset 2px 2px 2px 2px  10px #640028;
+        margin: 15% 0 0 0;
+    }
+    main .service  .card-page .page h4{
+        padding: 20px 0 0 0;
+        font-size: 4em;
+        color:#FFB200 ;
+        background-size: cover ;
+        font-family: sans-serif;
+    }
+    main .service  .card-page .page p{
+        width: 90%;
+        opacity: 0.5;
+        font-size: 3em;
+        font-weight: 500;
+        align-items: center;
+        padding: 0 0 30px 0;
+        color: white;
+        text-shadow: 5px 5px 20px white;
+        font-family: sans-serif;
+     }
+     main .service  .card-page .page a{
+        background: black;
+        border-radius: 10px;
+        color:#FFB200;
+        text-decoration: none;
+        padding: 20px;
+        font-size: 2em;
+        
+    }
+    main .service  .card-page .page a:hover{
+        background:#FFB200 ;
+        color: black;
+    }
+    main .contact form{
+        background: rgba(0, 0, 255, 0.72) url(/asset/aloo.jpg) no-repeat center/cover;
+        background-blend-mode:multiply;
+        width: 80%;
+        height: 70vh;
+       margin: 5% 10% 5% 10%;
+       border-radius: 25px;
+       display: flex;
+       flex-direction: row;
+    }
+    main .contact form input[type=email] , input[type=text], textarea, input[type = submit]{
+        width: 90%;
+        height: 80px;
+        margin: 5px;
+        font-size: 30px;
+        border-radius: 20px;
+        background: rgba(128, 128, 128, 0.275);
+        outline: none;
+        font-family: sans-serif;
+        border: none;
+        color:white;
+        
+    }
+    main .contact form textarea{
+        height: 50%;
+    }
+    footer{
+        width: 100%;
+        height: 40vh;
+        display: flex;
+       
+    }
+    footer .logo{
+        width: 30%;
+    }
+    footer .logo img{
+        width: 60%;
+        filter: saturate(40%) invert(20%); 
+        margin: 0 0 0 20%;  
+    }
+    footer .logo  p{
+        color:rgb(89, 88, 88);
+        margin: 10% 0 0 30%; 
+        font-size: 2em;
+    }
+    footer .work 
+    {
+        width: 40%;
+    }
+    footer .work h1{
+        color: rgb(89, 88, 88);
+        padding: 2px;
+        margin:8% 0 0 15%;
+        font-size: 2em;
+    }
+    footer .work p{
+        color: rgb(89, 88, 88);
+        padding: 2px;
+        margin:2% 0 0 15%;
+        font-size: 1em;
+    }
+    footer .social {
+        width: 30%;
+        
+    }
+    footer .social input[type=search]{
+      display: none;
+    }
+    footer .social .social-links{
+        margin:10% 0 0 45%;
+        display: flex;
+        flex-direction: column;
+    } 
+    footer .social .social-links img{
+        width: 30%;
+        background-color: rgb(89, 88, 88);
+        padding: 0px;
+        margin: 5px;
+    }
+    footer hr{
+        height: 60%;
+        opacity: 0.2;
+    }
+    
+}
