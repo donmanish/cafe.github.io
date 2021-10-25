@@ -96,7 +96,7 @@ main  figure{
    
 }
 main  figure img{
-    width: 80%;
+    width: 100%;
     filter: invert(69%) sepia(57%) saturate(2141%) hue-rotate(360deg) brightness(104%) contrast(103%);
     box-shadow: inset 0 0 0 0 yellow;
     animation: cafe 2s;
@@ -129,10 +129,11 @@ main  .about h1{
     margin: 80px 0 0 0 ;
     color: #640028;
     text-align: center;
-    font-size: 6em;
+    font-size: 5em;
     font-family: pacifico;
 }
 main .about .detail{
+    padding: 120px  120px 0 120px;
     width: 100%;
     height: 80%;
     display: flex;
@@ -147,18 +148,16 @@ main .about .detail .txt{
 }
 
 main .about .detail .txt p{
-    padding: 100px 0 0 45px;
+  
     text-align:justify;
     color: #FFB200;
     font-size: 40px;
 }
 main .about .detail .cafe-work{
-    padding: 0 0 0 30px;
     width: 100%;
     height: 50vh;
 }
-main .about .detail .cafe-work img{
-    
+main .about .detail .cafe-work img{  
     width: 20%;
     border-radius: 20px;
     box-shadow: 20px  black;
@@ -171,17 +170,16 @@ main .service {
 }
 main .service  h1{
     color:white;
-    font-size: 6em;
-    padding: 150px  0 0 0 ;
+    font-size: 5em;
     font-family: pacifico;
     flex-wrap: wrap;
 }
 main .service  .card-page{
+    padding: 120px 0 0 0;
     display: flex;
     justify-content: space-around;
     align-items: center; 
     flex-wrap: wrap;
-   padding: 100px 0 50px 0;
 
 }
 main .service  .card-page .page{
@@ -234,17 +232,19 @@ main .contact h1{
     font-family: pacifico; 
 }
 main .contact form{
-    background: url(/asset/aloo.jpg) rgba(0, 0, 255, 0.72)  no-repeat center/cover;
-    background-blend-mode:multiply;
-    width: 80%;
+ 
+    background:  url('../asset/bread.png') rgba(0, 0, 255, 0.494) center/cover no-repeat ;
+    background-blend-mode: overlay;
+    width: 80vw;
     height: 70vh;
-   margin: 5% 10% 5% 10%;
+    margin: 5% 10% 5% 10%;
    border-radius: 25px;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    flex-wrap: wrap;
+   
 }
 main .contact form input[type=email] , input[type=text], textarea, input[type = submit]
 {
@@ -421,12 +421,16 @@ footer hr{
         width: 100%;
         height: 80%;
         display: flex;  
+        padding: 2px;
     }
     main .about .detail .txt{
         width: 80%;
+       
         
     }
- 
+    main .about .detail .cafe-work{
+        padding: 10px 0 0 25px;
+    }
     main .about .detail .txt p{
         padding: 0 0 0 0;
         font-size: 0.36em;
@@ -499,7 +503,7 @@ footer hr{
         width: 100%;
     }
     main .contact form{
-        background: rgba(0, 0, 255, 0.72) url(/asset/aloo.jpg) no-repeat center/cover;
+        background:  url('../asset/bread.png') rgba(0, 0, 255, 0.494) center/cover no-repeat ;
         background-blend-mode:multiply;
         width: 80%;
         height: 70vh;
@@ -675,11 +679,13 @@ footer hr{
     main .about  h1{
         font-size: 6em;
     }
+
     main .about .detail{
         flex-direction: column;
         width: 80%;
         height: 80%;
         display: flex;  
+        padding: 0 0  0 0;
     }
     main .about .detail .txt{
         width: 100%;
@@ -749,7 +755,7 @@ footer hr{
         color: black;
     }
     main .contact form{
-        background: rgba(0, 0, 255, 0.72) url(/asset/aloo.jpg) no-repeat center/cover;
+        background:  url('../asset/bread.png') rgba(0, 0, 255, 0.494) center/cover no-repeat ;
         background-blend-mode:multiply;
         width: 80%;
         height: 70vh;
