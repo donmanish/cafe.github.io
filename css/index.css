@@ -237,14 +237,11 @@ main .contact form{
     background-blend-mode: overlay;
     width: 80vw;
     height: 70vh;
-    margin: 5% 10% 5% 10%;
-   border-radius: 25px;
    display: flex;
-   justify-content: center;
-   align-items: center;
    flex-direction: column;
-   flex-wrap: wrap;
-   
+   align-items: center;
+    margin: 5% 10% 5% 10%;
+    border-radius: 25px;
 }
 main .contact form input[type=email] , input[type=text], textarea, input[type = submit]
 {
@@ -761,8 +758,6 @@ footer hr{
         height: 70vh;
        margin: 5% 10% 5% 10%;
        border-radius: 25px;
-       display: flex;
-       flex-direction: row;
     }
     main .contact form input[type=email] , input[type=text], textarea, input[type = submit]{
         width: 90%;
@@ -775,7 +770,7 @@ footer hr{
         font-family: sans-serif;
         border: none;
         color:white;
-        
+  
     }
     main .contact form textarea{
         height: 50%;
