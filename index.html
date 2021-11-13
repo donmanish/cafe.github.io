@@ -4,110 +4,160 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cafe</title>
+    <link rel="icon" type="image/x-icon" href="asset/favicon.ico">
+    <title>Cafe</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
-        <div class="logo"><a href=""><img src="logo/cafe-logo.png" alt=""></a></div>
-        <div class="nav">
-        <figure ><img onclick="menubar()" src="icons/menu.png" alt=""></figure>
-       <nav id="nav">
-        <div class="navlinks">
-            <a href="#">Home</a>
-            <a href="#about">About</a>
-            <a href="#service">service</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <figure><img onclick="closebar()" src="icons/close.png" alt=""></figure>
-       </nav>
-        </div>
+        <a href="#"><img class="logo" src="asset/cafe-logo.png"  "/></a>
+        <nav id="nav">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="btn">Getstarted</a></li>
+        </nav>
+        <ion-icon name="add-outline" onclick="opennav()" class="menu"></ion-icon>
+        <ion-icon name="close-outline"  onclick="closenav()" class="close"></ion-icon>
     </header>
     <main>
-        <section class="banner">
-            <div class="txt">
-                <h1>Welcome to cafe</h1>
-                <h4>Work of cafe art</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim nisi minus odit, corporis nulla quos vitae ratione fugit eius velit, debitis quibusdam accusamus cum voluptatem iusto earum itaque, voluptatibus doloribus.</p>
-            </div>
-        </section>
-        <figure>
-            <img src="banner/cafe.png" alt="">
-        </figure>
-        <section class="banner2"></section>
-        <section class="about" id="about">
-            <h1>About Cafe</h1>
-            <div class="detail">
-                <div class="txt">
-                   <p><Lorem><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestias porro nihil velit sint dolor! Corrupti ipsa voluptas neque repellat magni dolore, nemo error laboriosam consectetur nulla atque nobis a?
-                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perferendis repellat eveniet quis, consequuntur sed dignissimos fugiat nulla inventore corrupti architecto non rerum earum sit ipsum eaque fuga officiis mollitia?
-                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus rerum, eaque quasi nisi vitae laudantium tenetur iure adipisci ullam quae, assumenda a dolor animi? Illo asperiores adipisci quis beatae architecto!
-                    </i>
-                    </p>
-                </div>
-                <div class="cafe-work">
-                    <img src="asset/Fish Fry (Kolkata Style) - Spicy World Simple and Easy Recipes by Arpita.jpg" alt="">
-                    <img src="asset/Gâteaux de l'aid (le récap) - Recettes by Hanane.jpg" alt="">
-                    <img src="asset/Masala Chaas Recipe - Spice Up The Curry.jpg" alt="">
-                    <img src="asset/Pani puri recipe _ How to make pani puri - Raks Kitchen.jpg" alt="">
-                    <img src="asset/Medu Vada Recipe (Step-By-Step Video) - Fun FOOD Frolic.jpg" alt="">
-                    <img src="asset/Samosa Recipe Punjabi, Aloo Samosa Recipe - Yummy Indian Kitchen.webp" alt="">
-                </div>
-            </div>
-        </section>
-        <section class="service" id="service">
-            <h1>Cafe Service provide</h1>
-            <div class="card-page">
-                <div class="page">
-                    <h4>Chef's Special</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et exercitationem temporibus pariatur eaque numquam sit beatae possimus. Exercitationem ex sint veritatis aperiam? Consequatur aliquid nemo adipisci sequi debitis minus necessitatibus?</p>
-                    <a href="">Read More >></a>
-                </div>
-                <div class="page">
-                <h4>Vegan Dishes</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem architecto dignissimos autem molestiae mollitia ducimus totam temporibus quibusdam voluptates sint, deleniti quo, nisi dolorum. Consequuntur eveniet maiores sit voluptatum explicabo.</p>
-                <a href="">Read More >></a>
-                </div>
-                <div class="page">
-                <h4>Classic Menu </h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, totam provident voluptate, neque maxime itaque explicabo quibusdam debitis reiciendis dolore corporis, veritatis ab praesentium aliquam doloremque vel labore? Omnis, tempora?</p>
-                <a href="">Read More >></a>
-               </div>
-               </div>
-        </section>
-        <section class="contact" id="contact">
-            <h1>Contact</h1>
+    <section class="header-banner">
+        <div class="txt">
+            <h1>Welcome To Cafe</h1>
+            <h3>ArtWork</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+               Aperiam amet sint ipsum iste laboriosam commodi. <br>
+               Consequatur impedit magnam excepturi? Ut <br>
+               </p>
+               <button>Click me</button>
+        </div>
+        <img class="banner" src="asset/cafe.png" alt="">
+    </section>
+    <section class="about" id="about">
+      <h1>About</h1>
+      <div class="cards">
+        <div class="txt">
+            <h2>Cafe House Provided</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+               Aperiam amet sint ipsum iste laboriosam commodi. <br>
+               Consequatur impedit magnam excepturi? Ut <br>
+               </p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                Aperiam amet sint ipsum iste laboriosam commodi. <br>
+                Consequatur impedit magnam excepturi? Ut <br>
+                </p>
+          </div>
+          <div class="imggallery">
+            
+              <img  class="gall"src="asset/Cool, Refreshing Summer Drinks.jpg" alt="">
+              <img  class="gall"src="asset/Curry Bun Recipe, Stuffed Curry Bun Recipe, Paneer Stuffed Curry Bun.jpg" alt="">
+              <img  class="gall"src="asset/Fish Fry (Kolkata Style) - Spicy World Simple and Easy Recipes by Arpita.jpg" alt="">
+              <img  class="gall"src="asset/Masala Chaas Recipe - Spice Up The Curry.jpg" alt="">
+              <img class="gall" src="asset/Pani puri recipe _ How to make pani puri - Raks Kitchen.jpg" alt="">
+              
+          </div>
+      </div>
+    </section>
+    <section class="service" id="service">
+        <h1>Services We cafe provided</h1>
+        <div class="cards">
+            <div class="card1 ">
+                <h3>Heading</h3>
+                
+                  <p>Lorem ipsum dolor sit<br>
+                    amet consectetur<br>
+                     adipisicing elit<br>
+                     </p>
+                 <button>Clickme</button>
+            </div> 
+            <div class="card1 ">
+                <h3>Heading</h3>
+                
+                  <p>Lorem ipsum dolor sit<br>
+                    amet consectetur<br>
+                     adipisicing elit<br>
+                     </p>
+                 <button>Clickme</button>
+            </div> 
+            <div class="card1">
+                <h3>Heading</h3>
+                
+                  <p>Lorem ipsum dolor sit<br>
+                    amet consectetur<br>
+                     adipisicing elit<br>
+                     </p>
+                 <button>Clickme</button>
+            </div> 
+        </div>
+        <div class="cards">
+            <div class="card1 ">
+                <h3>Heading</h3>
+                
+                  <p>Lorem ipsum dolor sit<br>
+                    amet consectetur<br>
+                     adipisicing elit<br>
+                     </p>
+                 <button>Clickme</button>
+            </div> 
+            <div class="card1 ">
+                <h3>Heading</h3>
+                
+                  <p>Lorem ipsum dolor sit<br>
+                    amet consectetur<br>
+                     adipisicing elit<br>
+                     </p>
+                 <button>Clickme</button>
+            </div> 
+            <div class="card1">
+                <h3>Heading</h3>
+                
+                  <p>Lorem ipsum dolor sit<br>
+                    amet consectetur<br>
+                     adipisicing elit<br>
+                     </p>
+                 <button>Clickme</button>
+            </div> 
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <h1>Contact</h1>
+        <div class="contactpage">
             <form action="">
-                <input type="email" name="" id="" placeholder=" Email addresss"/><br >
-                <input type="text" name="" id="" placeholder=" Subject" /><br >
-                <textarea name="" id="" cols="30" rows="10" placeholder=" feedback"></textarea><br >
-                <input type="submit" value="submit">
+                <input type="text" placeholder="Please Enter mail" name="" id=""><br>
+                <input type="text" placeholder="Enter the Subject" name="" id=""><br>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Feedback....."></textarea><br>
+                <button>SUBMIT</button>
             </form>
-        </section>
+        </div>
+    </section>
     </main>
     <footer>
-        <div class="logo">
-            <img src="logo/cafe-logo.png" alt="">
-            <p>Cafe for <b>relax</b> and <b>Refresh.</b></p>
-        </div><hr>
-        <div class="work">
-          <h1>PHONE NO</h1>
-          <p>xxxxxxxxxx</p>
-          <h1>ADDRESS</h1>
-          <p>xxxx  xxxx   xxxx</p>
-          <h1>DAY TO OPEN</h1>
-          <p>MON - FRI</p>
-        </div><hr>
-        <div class="social">
-            <input type="search" name="" placeholder="Search" id="">
-            <div class="social-links">
-                <img src="icons/envelope.png" alt="">
-                <img src="icons/facebook.png" alt="">
-                <img src="icons/instagram.png" alt="">
-                <img src="icons/youtube.png" alt="">
+        <section class="footer">
+            <div class="phase1">
+                <img  class="logo" src="asset/cafe-logo.png" alt="">
+                <h1>Cafe life</h1>
             </div>
-        </div>
+            <div class="phase2">
+                <h1>Adresss</h1>
+                <p>Block D new work</p>
+                <h1>Phone No</h1>
+                <p>xxxxxxxxxxxxx</p>
+                <h1>Mail</h1>
+                <p>xxxxx.gmail.com</p>
+            </div>
+            <div class="phase3">
+                <div class="sociallinks">
+                  <a href=""><img class="social" src="asset/facebook.png" alt=""></a>
+                  <a href=""><img class="social" src="asset/instagram.png" alt=""></a>
+                  <a href=""> <img class="social" src="asset/whatsapp.png" alt=""></a>
+                  <a href=""><img class="social" src="asset/youtube.png" alt=""></a>
+                </div>
+            </div>
+        </section>
     </footer>
-    <script src="js/index.js"></script>
+   <script src="js/index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

@@ -1,13 +1,20 @@
+let imggall = document.querySelectorAll(".gall");
+let open = document.querySelector(".menu");
+   let nav = document.querySelector("nav");
+  let close = document.querySelector(".close");
 
-let nav = document.getElementById("nav");
-var media = window.matchMedia("max-width:730px");
-
-function menubar()
+function opennav()
 {
-    nav.style.display="block";
+        open.style.display="none";
+        nav.style.display ="block";
+        nav.style.textAlign ="center";
+        close.style.display="block";
+    
 }
-function closebar()
+function closenav()
 {
-    nav.style.display="none";
+        open.style.display="block";
+        nav.style.display ="none";
+        nav.style.transition ="2s";
+        close.style.display="none";
 }
-

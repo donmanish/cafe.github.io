@@ -1,836 +1,1749 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
-    font-family: sans-serif;
+    margin:0;
 }
 header{
-    background-color: rgb(223, 194, 194);
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    justify-content: space-between;
-    flex-wrap: wrap;
     position: fixed;
+    background-color: #630A10;
     width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     z-index: 1000;
 }
-header .logo img{
-    width: 150px;
-    filter: none;
+header a .logo{
+   display: block;
+   width: 100px;
+   padding: 10px;
+   filter: contrast(200%) invert(10);
 }
-
-header figure
-{
+header nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    opacity: 0.96;
+}
+header nav li{
+    list-style-type: none;
+    padding: 10px;
+}
+header nav li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #FACE7F;
+    transition: 3s;
+}
+header nav li a:hover{
+    color: white;
+}
+header nav li .active{
+    color: #FCF0C8;
+}
+header nav li .btn{
+    background-color: #FACE7F;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    width: 20%;
+}
+header nav li .btn:hover{
+    background-color: white;
+    color: black;
+}
+header ion-icon{
     display: none;
 }
-header figure img
-{
-   width: 50px;
-}
-header nav
-{
-    display: block;
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-
-}
-header nav .navlinks a{
-    font-size: 30px;
-    text-decoration: none;
-    margin: 30px;
-    color: #640028;
-;
-    letter-spacing: 5px;
-}
-header nav .navlinks a:hover{
-    color: #FFB200;
-}
-
-/* main */
 main {
-    background:black;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-main .banner{
-    background:linear-gradient(30deg , #640028, black);
-    clip-path: circle(180vh at 0% -57vh);
-    width: 100%;
-    height: 122vh;
-   
-}
-main .banner .txt{
-  position: absolute;
-  color:#FFB200;
-  width: 800px;
-  height: 500px;
-  top:30%;
-  left:5%;
- 
-
-}
-main .banner .txt h1{
- 
-   font-family: pacifico;
-   font-size: 7em;
-   text-shadow: 2px 2px 10px black;
-}
-main .banner .txt h4{
     
-    font-size: 5em;
-    line-height: 2em;
-    text-shadow: 4px 4px 10px black;
+    z-index: 500;
 }
-main .banner .txt p{
-    font-size: 1.5em;
-    color: white;
-    text-shadow: 2px 2px 10px black;
-}
-main  figure{
-    position: absolute;
-    top:20%;
-    left:45%;
-   
-}
-main  figure img{
+main .header-banner{
+    background:url("../asset/banner.png") no-repeat center/cover,  linear-gradient(to right ,#3a0004 , black 80% );
     width: 100%;
-    filter: invert(69%) sepia(57%) saturate(2141%) hue-rotate(360deg) brightness(104%) contrast(103%);
-    box-shadow: inset 0 0 0 0 yellow;
-    animation: cafe 2s;
-    animation-iteration-count: infinite;
+    height: 100vh;
+    display: flex;
+    flex-direction: rows;
+    background-blend-mode: overlay;
 }
-@keyframes cafe {
-    0%{
-        filter: invert(69%) sepia(57%) saturate(2141%) hue-rotate(360deg) brightness(104%) contrast(103%);
-    }
-    50%{
-        filter: invert(33%) sepia(94%) saturate(776%) hue-rotate(177deg) brightness(99%) contrast(90%);
-    }
-    100%{
-        filter: invert(70%) sepia(99%) saturate(7498%) hue-rotate(285deg) brightness(86%) contrast(102%);
-    }
- 
+main .header-banner .txt
+{
+    width: 500px;
+    height: 300px;
+   transform: translate(50%,100%);
 }
-main  .banner2 {
-    background: url("/banner/banner.png")  center/contain no-repeat , linear-gradient(100deg ,  #CF6E1C,#FFB200);
-    height: 20vh;
-    width: 100%;
-}
-
-main  .about{
-   background:white;
-   width: 100%;
-   height: 100vh;
-}
-main  .about h1{
-    margin: 80px 0 0 0 ;
-    color: #640028;
-    text-align: center;
-    font-size: 5em;
+main .header-banner .txt h1{
+    color:#FFB200;
+    font-size: 4rem;
     font-family: pacifico;
+    text-shadow: 0 0 10px black;
 }
-main .about .detail{
-    padding: 120px  120px 0 120px;
+main .header-banner .txt h3{
+    color:white;
+    font-size: 3rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    
+}
+main .header-banner .txt p{
+    color:white;
+    font-size: 1rem;
+    font-family:sans-serif;
+    line-height: 25px;
+    text-shadow: 0 0 10px black;
+    
+}
+main .header-banner .txt button{
+    background-color: #FACE7F;
+    color: white;
+    border:none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0 0 0;
+    width: 40%;
+    letter-spacing: 2px;
+    box-shadow: 0 0 10px black;
+}
+main .header-banner .txt button:hover{
+    background-color: #fff;
+    color: #333;
+}
+main .header-banner .banner
+{
+   position: absolute;
+   width: 30%;
+   height: auto;
+   top:20%;
+   left: 50%;
+   opacity: 0.3;
+   animation: bigshow 3s infinite;
+   filter: invert(100%);
+}
+@keyframes bigshow {
+    100%{transform: rotate(30deg);
+        scrollbar-shadow-color: 10px  black;
+        opacity: 0.1;
+    }
+}
+main .about{
+    background:linear-gradient(30deg , #fcf0c8 100%, white);
     width: 100%;
-    height: 80%;
-    display: flex;
-    
-    
+    height: 100vh;
+  
 }
-main .about .detail .txt{
-    
-    width: 140%;
-    padding: 5px;
-    font-size: 50px;
+main .about h1{
+    display: block;
+    padding: 50px 0 0 0;
+    font-size: 4rem;
+    color: black;
+    text-align: center;
+}
+main .about .txt{
+   
+    width: 40%;
+    margin: 10% 10% auto;    
+}
+main .about .txt h2{
+    color: #630A10;
+    font-size: 5rem;
+    font-family: sans-serif;
+    line-height: 90px;
+}
+main .about .cards
+{
+    display: flex;
+}
+main .about .txt p{
+    color: black;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    line-height: 50px;
+    margin: 5px;
+    font-weight: 700;
+    opacity: 0.6;
+
+}
+main .about .imggallery{
+    width: 30%;
+    height: 200px;
+    margin: 10% 0% auto; 
+    display: flex;
+    flex-wrap: wrap;
+    transform: scale(1.3);
+}
+main .about .imggallery .gall{
+    width: 25%;
+    height: auto;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 5px  black;
+    animation: gallary 5s  infinite;
 }
 
-main .about .detail .txt p{
-  
-    text-align:justify;
-    color: #FFB200;
-    font-size: 40px;
+@keyframes gallary {
+    100%{ transition:5s; transform: rotateY(360deg); opacity:0.6;}
 }
-main .about .detail .cafe-work{
-    width: 100%;
-    height: 50vh;
-}
-main .about .detail .cafe-work img{  
-    width: 20%;
-    border-radius: 20px;
-    box-shadow: 20px  black;
-}
-main .service {
-    text-align: center;
-    background-color: #640028;
+
+main .service
+{
+    background-color: #911F27;
     width: 100%;
     height: 100vh;
 }
-main .service  h1{
-    color:white;
-    font-size: 5em;
-    font-family: pacifico;
-    flex-wrap: wrap;
-}
-main .service  .card-page{
-    padding: 120px 0 0 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center; 
-    flex-wrap: wrap;
-
-}
-main .service  .card-page .page{
-    background: rgba(250, 249, 249,0.45);
-    border-radius: 40px;
-    width: 500px;
-    height:600px;
-    box-shadow: inset 2px 2px 2px 2px  10px #640028;
-}
-main .service  .card-page .page h4{
-    padding: 20px 0 20px 0;
-    font-size: 4em;
-    color:#FFB200 ;
-    background-size: cover ;
-    font-family: sans-serif;
-}
-main .service  .card-page .page p{
-   width: 500px;
-   opacity: 0.5;
-   font-size: 2em;
-   align-items: center;
-   margin: 10px;
-   padding: 10px 10px 40px 10px;
+main .service h1{
+   display: block;
+   text-align: center;
    color: white;
-   text-shadow: 5px 5px 20px white;
-   font-family: sans-serif;
+   padding: 50px 0 50px 0;
+   font-size: 4rem;
 }
-main .service  .card-page .page a{
-    background: black;
+main .service .cards{
+ display: flex;
+ justify-content: center;
+}
+main .service .cards .card1{
+   background-color:#fcf0c8 ;
+   width: 10%;
+   height: 300px;
+   border-radius: 10px;
+   margin: 20px 120px auto;
+   box-shadow: 0 0 30px black;
+}
+main .service .cards .card1 h3{
+    font-size: 3rem;
+    padding: 10px 0 0 0;
+    text-align: center;
+    text-shadow: 0 0 2px black;
+}
+main .service .cards .card1 p{
+    font-size: 1.6rem;
+    padding: 12px 0 0 0;
+    text-align: center;
+    opacity: 0.8;
+}
+main .service .cards .card1 button{
+    background-color: #911F27;
+    width: 50%;
+    border:none;
     border-radius: 10px;
-    color:#FFB200;
-    text-decoration: none;
-    padding: 20px;
-    font-size: 1em;
-    font: inherit;
+    padding: 10px;
+    margin: 20px 0 0 50px;
+    letter-spacing: 2px;
 }
-main .service  .card-page .page a:hover{
-    background:#FFB200 ;
-    color: black;
+main .service .cards .card1 button:hover{
+    background-color: #333;
+    color: white;
 }
-
 main .contact{
+    background:linear-gradient(-210deg ,#630A10  100%, black 60%);
     width: 100%;
     height: 100vh;
 }
 main .contact h1{
-    color: white;
+    display: block;
+    padding: 50px 0 0 0;
+    font-size: 4rem;
+    color: black;
     text-align: center;
-    font-size: 6em;
-    font-family: pacifico; 
 }
-main .contact form{
- 
-    background:  url('../asset/bread.png') rgba(0, 0, 255, 0.494) center/cover no-repeat ;
-    background-blend-mode: overlay;
-    width: 80vw;
-    height: 70vh;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-    margin: 5% 10% 5% 10%;
-    border-radius: 25px;
-}
-main .contact form input[type=email] , input[type=text], textarea, input[type = submit]
+main .contact .contactpage
 {
-    width: 900px;
-    height: 80px;
-    margin: 5px;
-    font-size: 30px;
-    border-radius: 20px;
-    background: rgba(128, 128, 128, 0.275);
+   margin: 5% 2% auto;
+    width: 80%;
+    transform: translate(10%);
     outline: none;
-    font-family: sans-serif;
-    border: none;
-    color:white;
-    padding: 0 0 0 30px;
-   
 }
-main .contact  input[type = submit]{
-    background-color: rgba(0, 128, 0, 0.72);
-    border: none;
-    color: white;
-    
-}
-main .contact  input[type = submit]:hover{
-    background-color: rgba(2, 186, 2, 0.72);
-    border: none;
-    color: white;
-}
-main .contact form textarea{
-    height: 500px;
-    padding: 50px 0 0 20px;
-}
-main .contact form textarea::placeholder
+main .contact .contactpage input[type=text]
 {
-    padding: 9px 0 0 0;
-    
+    height: 60px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border:none;
+    margin:30px 0 0  0;
+    box-shadow: 0 0 5px black;
+    color:white;
+    font-size: 1rem;
+
 }
-footer{
+main .contact .contactpage input[type=text]:focus
+{
+    outline: none;
+    background-color: grey;
+    opacity: 0.5;
+}
+main .contact .contactpage input[type=text]::placeholder{
+    font-size: 1rem;
+}
+main .contact .contactpage textarea{
+    margin: 30px 0 0 0;
+    width: 100%;
+    outline: none;
+    box-shadow: 0 0 5px black;
+    color:black;
+    font-size: 1rem;
+}
+main .contact .contactpage textarea::placeholder{
+    font-size: 1rem;
+    padding: 20px;
+}
+main .contact .contactpage button{
+    border: none;
     background-color: black;
+    padding: 40px;
+    width: 40%;
+    border-radius: 10px;
+    margin:10px 0 0 0;
+    color: white;
+    margin: 2% 28% auto;
+}
+main .contact .contactpage button:hover
+{
+    background-color: #fff;
+    color: black;
+}
+footer
+{
+    background-color: white;
+    width: 100%;
+    height: 50vh;
+}
+footer .footer{
+    background-color:rgb(21, 19, 19);
     width: 100%;
     height: 50vh;
     display: flex;
 }
-footer .logo{
-    width: 30%;
+footer .footer .phase1{
+    width: 33%;
+    height: 50vh;
 }
-footer .logo img{
-    width: 40%;
-    filter: saturate(40%) invert(20%); 
-    margin: 0 0 0 30%;  
+footer .footer .phase1 h1{
+    color: thistle;
+    margin: -10% 30%;
+
 }
-footer .logo  p{
-    color: rgb(89, 88, 88);
-    margin: 10% 0 0 30%; 
-    font-size: 2em;
+footer .footer .phase1 .logo{
+    width: 35%;
+    margin: 20% 20%;
 }
-footer .work 
+footer .footer .phase2{
+
+    width: 33.5%;
+    height: 50vh;
+    color: thistle;
+}
+footer .footer .phase2 h1 
 {
-    width: 40%;
+    margin: 7% 35% auto;
 }
-footer .work h1{
-    color: rgb(89, 88, 88);
-    padding: 2px;
-    margin:8% 0 0 40%;
+footer .footer .phase2 p 
+{
+    margin: 7% 35% auto;
 }
-footer .work p{
-    color:rgb(89, 88, 88);
-    padding: 2px;
-    margin:2% 0 0 40%;
+footer .footer .phase3{
+
+    width: 33.5%;
+    height: auto;
 }
-footer .social {
+footer .footer .phase3 .sociallinks{
+   
     width: 30%;
+    height: auto;
+    margin: 30% 35% auto;
 }
-footer .social input[type=search]{
-    width: 50%;
-    height: 60px;
-    border-radius: 6px;
-    outline: none;
-    font-size: 2em;
-    padding: 0 0 0 10px;
-    margin:30% 0 0 25%;
-    background-color: rgb(89, 88, 88);
-    color: whitesmoke;
+footer .footer .phase3 .sociallinks .social{
+    width: 40px;
+    padding: 5px;
+    filter: invert(50%);
 }
-footer .social .social-links{
-    margin:10% 0 0 44%;
-} 
-footer .social .social-links img{
-    width: 10%;
-    background-color: rgb(89, 88, 88);
-    padding: 10px;
-    margin: 2px;
-}
-footer hr{
-    height: 80%;
-  opacity: 0.2;
 
-}
-/*-------------------------------------------------------------------------------------------------------------- Media query  with mobile-----------------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width: 730px) {
-    
-    header {
-        background-color: rgb(223, 194, 194);
-        
-    }
-    header nav {
-       display:none;
-       position: absolute;
-       background-color: white;
-       width: 100%;
-       top:0;
-       right:0;
-       z-index: 1000;
-    }
-    header nav .navlinks{
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-       
-    }
-    header nav .navlinks a{
-        margin: 0;
-       padding: 50px;
-    }
-    header figure {
-        display: inline-block;
-        cursor: pointer;
-    }
-    header nav figure
-    {
-        position: absolute;
-        top:25px;
-        left: 83%;
-        display: inline-block;
-        cursor: pointer;
-    }
 
-    /* main responsive */
-    main{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------- media works------------------------------- */
+
+@media screen and (max-width: 1300px ) and (max-height:1500px){
+    header{
+        position: fixed;
+        background-color: #630A10;
         width: 100%;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     }
-    main .banner .txt{
-        width: 250px;
-        top:35%;
-        left:center;
-        overflow: hidden;
-        z-index: 8;
-        
+    header a .logo
+    {
+        position: relative;
+        z-index: 1000;
     }
-    main .banner .txt h1{
-        font-size: 2em;
+    header nav{
+        display:none;
+        position: absolute;
+        background-color: #630A10;
+        width: 100%;
+        height:350px;
+        left:0;
+        top:0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
     }
-    main .banner .txt h4{
-        font-size: 1em;
+    header .menu{
+        display: block;
+        font-size: 5rem;
+        margin:15px;
+        color: rgba(255, 255, 255, 0.645);
+        transition: 0.3s;
+        cursor: pointer;
     }
-    main .banner .txt p{
-        font-size: 0.8em;
+    header .menu:hover{
+        transform: rotate(44deg);
+        transition: 0.3s;
     }
-    main  figure{
-        top:70%;
-        left:10%;
+    header .close{
+        display: none;
+        font-size: 5rem;
+        margin:15px;
+        font-weight: 700;
+        color: white;
+        transition: 0.3s;
+        cursor: pointer;
     }
-    main  figure img{
-         width: 200px;
+    header .close:hover{
+        transform: rotate(43deg);
+        transition: 0.3s;
+    }
+    
+    main .header-banner .txt
+    {
+    width: 80%;
+    height: 300px;
+   transform: translate(0%,80%);
+   text-align: center;
+   margin: 0 0 0 100px;
+   }
+   main .header-banner .txt h1{
+   
+    color:#FFB200;
+    font-size: 6rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt h3{
+       
+    color:white;
+    font-size: 4rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    
+     }
+    main .header-banner .txt p{
+    color:white;
+    font-size: 2rem;
+    font-family:sans-serif;
+    line-height: 80px;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt button{
+        background-color: #FACE7F;
+        font-size: 1rem;
+        color: white;
+        border:none;
+        border-radius: 2px;
+        padding: 10px;
+        margin: 50px 0 0 0;
+        width: 40%;
+        letter-spacing: 2px;
+        box-shadow: 0 0 10px black;
     }
     main .about{
-        height: 100%;
-    }
-    main .about  h1{
-        font-size: 40px;
-    }
-    main .about .detail{
-        flex-direction: column;
+        background:linear-gradient(30deg ,#fcf0c8, white);
         width: 100%;
-        height: 80%;
-        display: flex;  
-        padding: 2px;
+        height: 60vh;
+      
     }
-    main .about .detail .txt{
-        width: 80%;
-       
-        
-    }
-    main .about .detail .cafe-work{
-        padding: 10px 0 0 25px;
-    }
-    main .about .detail .txt p{
-        padding: 0 0 0 0;
-        font-size: 0.36em;
-        height: 100%;
-        margin: 0 0 0 20%;
-    }
-    main .service {
-        text-align: center;
-        background-color: #640028;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        height: 230vh;
-    }
-    main .service  h1{
-        color:white;
-        font-size: 3em;
-        padding: 20px  0 0 0 ;
-        font-family: pacifico;
-    }
-    main .service  .card-page{
-        display: flex;
-        align-items: center; 
-       
-    }
-    main .service  .card-page .page{
-        background: rgba(250, 249, 249, 0.45);
-        border-radius: 40px;
-        width: 250px;
-        height:350px;
-        box-shadow: inset 2px 2px 2px 2px  10px #640028;
-        margin: 20px;
-    }
-    main .service  .card-page .page h4{
-        padding: 20px 0 0 0;
-        font-size: 1.5em;
-        color:#FFB200 ;
-        background-size: cover ;
-        font-family: sans-serif;
-    }
-    main .service  .card-page .page p{
-        width: 90%;
-        opacity: 0.5;
-        font-size: 1em;
-        font-weight: 500;
-        align-items: center;
-        padding: 0 0 30px 0;
-        color: white;
-        text-shadow: 5px 5px 20px white;
-        font-family: sans-serif;
-     }
-     main .service  .card-page .page a{
-        background: black;
-        border-radius: 10px;
-        color:#FFB200;
-        text-decoration: none;
-        padding: 15px;
-        font-size: 0.1em;
-        font: inherit;
-    }
-    main .service  .card-page .page a:hover{
-        background:#FFB200 ;
+    main .about h1{
+        display: block;
+        padding: 50px 0 0 0;
+        font-size: 4rem;
         color: black;
+        text-align: center;
     }
-    main .contact h1{
-        font-size: 3em;
-        padding: 2px;    
+    main .about .txt{
+       
+        width: 40%;
+        margin: 10% 10% auto;    
     }
-    main .contact .form {
-        width: 100%;
-    }
-    main .contact form{
-        background:  url('../asset/bread.png') rgba(0, 0, 255, 0.494) center/cover no-repeat ;
-        background-blend-mode:multiply;
-        width: 80%;
-        height: 70vh;
-       margin: 5% 10% 5% 10%;
-       border-radius: 25px;
-       display: flex;
-       flex-direction: row;
-    }
-    main .contact form input[type=email] , input[type=text], textarea, input[type = submit]{
-        width: 90%;
-        height: 60px;
-        margin: 5px;
-        font-size: 30px;
-        border-radius: 20px;
-        background: rgba(128, 128, 128, 0.275);
-        outline: none;
+    main .about .txt h2{
+        color: #630A10;
+        font-size: 3rem;
         font-family: sans-serif;
-        border: none;
-        color:white;
+        line-height: 90px;
+    }
+    main .about .cards
+    {
+        display: flex;
+    }
+    main .about .txt p{
+        color: black;
+        font-size: 0.9rem;
+        font-family: sans-serif;
+        line-height: 20px;
+        margin: 5px;
+        font-weight: 700;
+        opacity: 0.6;
+    
+    }
+    main .about .imggallery{
+        width: 30%;
+        height: 200px;
+        margin: 10% 0% auto; 
+        display: flex;
+        flex-wrap: wrap;
+        transform: scale(1.3);
+    }
+    main .about .imggallery .gall{
+        width: 30%;
+        height: auto;
+        padding: 10px;
+        border-radius: 50px;
+        box-shadow: 0 5px 5px  black;
+        animation: gallary 5s  infinite;
+    }
+    main .service
+{
+    background-color: #911F27;
+    width: 100%;
+    height: 100vh;
+}
+main .service h1{
+   display: block;
+   text-align: center;
+   color: white;
+   padding: 50px 0 50px 0;
+   font-size: 4rem;
+}
+main .service .cards{
+ display: flex;
+ justify-content: center;
+}
+main .service .cards .card1{
+   background-color:#fcf0c8 ;
+   width: 40%;
+   height: 300px;
+   border-radius: 10px;
+   margin: 60px 60px auto;
+}
+main .service .cards .card1 h3{
+    font-size: 3rem;
+    padding: 10px 0 0 0;
+    text-align: center;
+    text-shadow: 0 0 2px black;
+}
+main .service .cards .card1 p{
+    font-size: 1.6rem;
+    padding: 12px 0 0 0;
+    text-align: center;
+    opacity: 0.8;
+}
+main .service .cards .card1 button{
+    background-color: #911F27;
+    width: 50%;
+    border:none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0 0 50px;
+    letter-spacing: 2px;
+    color: white;
+}
+main .service .cards .card1 button:hover{
+    background-color: #333;
+    color: white;
+}
+
+  
+}
+@media screen and (max-width: 1300px ) and (max-height:600px){
+    header{
+        position: fixed;
+        background-color: #630A10;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    }
+    header a .logo
+    {
+        position: relative;
+        z-index: 1000;
+    }
+    header nav{
+        display:none;
+        position: absolute;
+        background-color: #630A10;
+        width: 100%;
+        height:350px;
+        left:0;
+        top:0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+    }
+    header .menu{
+        display: block;
+        font-size: 5rem;
+        margin:15px;
+        color: rgba(255, 255, 255, 0.645);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    header .menu:hover{
+        transform: rotate(44deg);
+        transition: 0.3s;
+    }
+    header .close{
+        display: none;
+        font-size: 5rem;
+        margin:15px;
+        font-weight: 700;
+        color: white;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    header .close:hover{
+        transform: rotate(43deg);
+        transition: 0.3s;
+    }
+    main .header-banner .txt
+    {
+    width: 80%;
+    height: 300px;
+   transform: translate(6%,30%);
+   text-align: center;
+   margin: 0 0 0 50px;
+   }
+   main .header-banner .txt h1{
+   
+    color:#FFB200;
+    font-size: 4rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt h3{
+       
+    color:white;
+    font-size: 2rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    
+     }
+    main .header-banner .txt p{
+    color:white;
+    font-size: 2rem;
+    font-family:sans-serif;
+    line-height: 50px;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt button{
+        background-color: #FACE7F;
+        font-size: 1rem;
+        color: white;
+        border:none;
+        border-radius: 2px;
+        padding: 10px;
+        margin: 50px 0 0 0;
+        width: 40%;
+        letter-spacing: 2px;
+        box-shadow: 0 0 10px black;
+    }
+    main .about{
+        background:linear-gradient(30deg ,#fcf0c8, white);
+        width: 100%;
+        height: 100vh;
+      
+    }
+    main .about h1{
+        display: block;
+        padding: 50px 0 0 0;
+        font-size: 4rem;
+        color: black;
+        text-align: center;
+    }
+    main .about .txt{
+       
+        width: 40%;
+        margin: 10% 10% auto;    
+    }
+    main .about .txt h2{
+        color: #630A10;
+        font-size: 3rem;
+        font-family: sans-serif;
+        line-height: 90px;
+    }
+    main .about .cards
+    {
+        display: flex;
+    }
+    main .about .txt p{
+        color: black;
+        font-size: 0.8rem;
+        font-family: sans-serif;
+        line-height: 20px;
+        margin: 5px;
+        font-weight: 700;
+        opacity: 0.6;
+    
+    }
+    main .about .imggallery{
+        width: 30%;
+        height: 200px;
+        margin: 10% 0% auto; 
+        display: flex;
+        flex-wrap: wrap;
+        transform: scale(1.3);
+    }
+    main .about .imggallery .gall{
+        width: 30%;
+        height: auto;
+        padding: 10px;
+        border-radius: 50px;
+        box-shadow: 0 5px 5px  black;
+        animation: gallary 5s  infinite;
+    }
+    main .service
+    {
+        background-color: #911F27;
+        width: 100%;
+        height: 160vh;
+    }
+    main .service h1{
+       display: block;
+       text-align: center;
+       color: white;
+       padding: 50px 0 50px 0;
+       font-size: 4rem;
+    }
+    main .service .cards{
+     display: flex;
+     justify-content: center;
+    }
+    main .service .cards .card1{
+       background-color:#fcf0c8 ;
+       width: 40%;
+       height: 300px;
+       border-radius: 10px;
+       margin: 60px 40px auto;
+    }
+    main .service .cards .card1 h3{
+        font-size: 2rem;
+        padding: 10px 0 0 0;
+        text-align: center;
+        text-shadow: 0 0 2px black;
+    }
+    main .service .cards .card1 p{
+        font-size: 1.6rem;
+        padding: 12px 0 0 0;
+        text-align: center;
+        opacity: 0.8;
+    }
+    main .service .cards .card1 button{
+        background-color: #911F27;
+        width: 50%;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px 0 0 50px;
+        letter-spacing: 2px;
+        color: white;
+    }
+    main .service .cards .card1 button:hover{
+        background-color: #333;
+        color: white;
+    }
+    main .contact{
+        background:linear-gradient(-210deg ,#630A10  100%, black 60%);
+        width: 100%;
+        height: 140vh;
+    }
+    
+}
+@media screen and (max-width: 768px ) {
+    header{
+        position: fixed;
+        background-color: #630A10;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    }
+    header a .logo
+    {
+        position: relative;
+        z-index: 1000;
+    }
+    header nav{
+        display:none;
+        position: absolute;
+        background-color: #630A10;
+        width: 100%;
+        height:350px;
+        left:0;
+        top:0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+    }
+    header .menu{
+        display: block;
+        font-size: 2.5rem;
+        margin:15px;
+        color: rgba(255, 255, 255, 0.645);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    header .menu:hover{
+        transform: rotate(44deg);
+        transition: 0.3s;
+    }
+    header .close{
+        display: none;
+        font-size: 2.5rem;
+        margin:15px;
+        font-weight: 700;
+        color: white;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    header .close:hover{
+        transform: rotate(43deg);
+        transition: 0.3s;
+    }
+    main .header-banner .txt
+    {
+    width: 80%;
+    height: 300px;
+   transform: translate(0%,80%);
+   text-align: center;
+   margin: 0 0 0 60px;
+   }
+   main .header-banner .txt h1{
+   
+    color:#FFB200;
+    font-size: 5rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt h3{
+       
+    color:white;
+    font-size: 4rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    
+     }
+    main .header-banner .txt p{
+    color:white;
+    font-size: 2rem;
+    font-family:sans-serif;
+    line-height: 40px;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt button{
+        background-color: #FACE7F;
+        font-size: 1rem;
+        color: white;
+        border:none;
+        border-radius: 2px;
+        padding: 10px;
+        margin: 50px 0 0 0;
+        width: 40%;
+        letter-spacing: 2px;
+        box-shadow: 0 0 10px black;
+    }
+    main .about{
+        background:linear-gradient(30deg ,#fcf0c8, white);
+        width: 100%;
+        height: 100vh;
+      
+    }
+    main .about h1{
+        display: block;
+        padding: 50px 0 0 0;
+        font-size: 4rem;
+        color: black;
+        text-align: center;
+    }
+    main .about .txt{
+       
+        width: 40%;
+        margin: 10% 10% auto;    
+    }
+    main .about .txt h2{
+        color: #630A10;
+        font-size: 5rem;
+        font-family: sans-serif;
+        line-height: 60px;
+    }
+    main .about .cards
+    {
+        display: flex;
+       flex-direction: row;
         
     }
-    main .contact form textarea{
-        height: 50%;
+    main .about .txt
+    {
+        margin: 10px 0 0 60px;
     }
-    footer{
+    main .about .txt p{
+        color: black;
+        font-size: 1rem;
+        font-family: sans-serif;
+        line-height: 25px;
+        margin: 10px;
+        font-weight: 700;
+        opacity: 0.6;
+    
+    }
+    main .about .imggallery{
+        width: 40%;
+        height: 600px;
+        margin: 80px 0 0 50px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        transform: scale(1.3);
+    }
+    main .about .imggallery .gall{
+        width: 30%;
+        height: auto;
+        padding: 2px;
+        margin: 10px auto;
+        border-radius: 50px;
+        box-shadow: 0 5px 5px  black;
+        animation: gallary 5s  infinite;
+    }
+    main .service
+    {
+        background-color: #911F27;
+        width: 100%;
+        height: 100vh;
+    }
+    main .service h1{
+       display: block;
+       text-align: center;
+       color: white;
+       padding: 50px 0 50px 0;
+       font-size: 4rem;
+    }
+    main .service .cards{
+     display: flex;
+     justify-content: center;
+    }
+    main .service .cards .card1{
+       background-color:#fcf0c8 ;
+       width: 40%;
+       height: 300px;
+       border-radius: 10px;
+       margin: 60px 40px auto;
+    }
+    main .service .cards .card1 h3{
+        font-size: 2rem;
+        padding: 10px 0 0 0;
+        text-align: center;
+        text-shadow: 0 0 2px black;
+    }
+    main .service .cards .card1 p{
+        font-size: 1.6rem;
+        padding: 12px 0 0 0;
+        text-align: center;
+        opacity: 0.8;
+    }
+    main .service .cards .card1 button{
+        background-color: #911F27;
+        width: 50%;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px 0 0 50px;
+        letter-spacing: 2px;
+        color: white;
+    }
+    main .service .cards .card1 button:hover{
+        background-color: #333;
+        color: white;
+    }
+
+}
+@media screen and (max-width: 600px ) {
+    header{
+        position: fixed;
+        background-color: #630A10;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    }
+    header a .logo
+    {
+        position: relative;
+        z-index: 1000;
+    }
+    header nav{
+        display:none;
+        position: absolute;
+        background-color: #630A10;
+        width: 100%;
+        height:350px;
+        left:0;
+        top:0;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+    }
+    header .menu{
+        display: block;
+        font-size: 2.5rem;
+        margin:15px;
+        color: rgba(255, 255, 255, 0.645);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    header .menu:hover{
+        transform: rotate(44deg);
+        transition: 0.3s;
+    }
+    header .close{
+        display: none;
+        font-size: 2.5rem;
+        margin:15px;
+        font-weight: 700;
+        color: white;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    header .close:hover{
+        transform: rotate(43deg);
+        transition: 0.3s;
+    }
+    main .header-banner .txt
+    {
+    width: 80%;
+    height: 300px;
+   transform: translate(5%,45%);
+   text-align: center;
+   margin: 0 0 0 30px;
+   }
+   main .header-banner .txt h1{
+   
+    color:#FFB200;
+    font-size: 4rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt h3{
+       
+    color:white;
+    font-size: 3rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    
+     }
+    main .header-banner .txt p{
+    color:white;
+    font-size: 1rem;
+    font-family:sans-serif;
+    line-height: 25px;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt button{
+        background-color: #FACE7F;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0 0 0;
+        width: 40%;
+        letter-spacing: 2px;
+        box-shadow: 0 0 10px black;
+    } 
+    main .about{
+        background:linear-gradient(30deg ,#fcf0c8, white);
+        width: 100%;
+        height: 100vh;
+      
+    }
+    main .about h1{
+        display: block;
+        padding: 50px 0 0 0;
+        font-size: 4rem;
+        color: black;
+        text-align: center;
+    }
+    main .about .txt{
+       
+        width: 40%;
+        margin: 10% 10% auto;    
+    }
+    main .about .txt h2{
+        color: #630A10;
+        font-size: 4rem;
+        font-family: sans-serif;
+        line-height: 50px;
+    }
+    main .about .cards
+    {
+        display: flex;
+       flex-direction: row;
+        
+    }
+    main .about .txt
+    {
+        margin: 10px 0 0 60px;
+    }
+    main .about .txt p{
+        color: black;
+        font-size: 1rem;
+        font-family: sans-serif;
+        line-height: 25px;
+        margin: 5px;
+        font-weight: 700;
+        opacity: 0.6;
+    
+    }
+    main .about .imggallery{
+        width: 40%;
+        height: 600px;
+        margin: 80px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        transform: scale(1.3);
+    }
+    main .about .imggallery .gall{
+        width: 25%;
+        height: auto;
+        padding: 2px;
+        margin: 10px auto;
+        border-radius: 50px;
+        box-shadow: 0 5px 5px  black;
+        animation: gallary 5s  infinite;
+    }
+    main .service
+    {
+        background-color: #911F27;
+        width: 100%;
+        height: 250vh;
+    }
+    main .service h1{
+       display: block;
+       text-align: center;
+       color: white;
+       padding: 50px 0 50px 0;
+       font-size: 4rem;
+    }
+    main .service .cards{
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+    }
+    main .service .cards .card1{
+       background-color:#fcf0c8 ;
+       width: 40%;
+       height: 300px;
+       border-radius: 10px;
+       margin: 60px 5px auto;
+    }
+    main .service .cards .card1 h3{
+        font-size: 3rem;
+        padding: 10px 0 0 0;
+        text-align: center;
+        text-shadow: 0 0 2px black;
+    }
+    main .service .cards .card1 p{
+        font-size: 1.6rem;
+        padding: 12px 0 0 0;
+        text-align: center;
+        opacity: 0.8;
+    }
+    main .service .cards .card1 button{
+        background-color: #911F27;
+        width: 50%;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px 0 0 50px;
+        letter-spacing: 2px;
+        color: white;
+    }
+    main .service .cards .card1 button:hover{
+        background-color: #333;
+        color: white;
+    }
+    main .contact{
+        background:linear-gradient(-210deg ,#630A10  100%, black 60%);
+        width: 100%;
+        height: 120vh;
+    }
+    footer .footer{
+        background-color:rgb(21, 19, 19);
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    footer .footer .phase1{
         width: 100%;
         height: 50vh;
-        display: flex;
+    }
+    footer .footer .phase1 h1{
+        color: thistle;
+        margin: 0% 38%;
+    
+    }
+    footer .footer .phase1 .logo{
+        width: 200px;
+        margin: 5% 20%;
+    }
+    footer .footer .phase2{
+    
+        width: 100%;
+        height: 50vh;
+        color: thistle;
+    }
+    footer .footer .phase2 h1 
+    {
+        
+        margin: 5% 35% auto;
+    }
+    footer .footer .phase2 p 
+    {
+        margin: 7% 35% auto;
+    }
+    footer .footer .phase3{
+    
+        width: 100%;
+        height: auto;
+    }
+    footer .footer .phase3 .sociallinks{
+       
+        width: 49%;
+        height: auto;
        
     }
-    footer .logo{
-        width: 30%;
+    footer .footer .phase3 .sociallinks .social{
+        width: 30px;
+        padding: 5px;
+        filter: invert(50%);
     }
-    footer .logo img{
-        width: 60%;
-        filter: saturate(40%) invert(20%); 
-        margin: 0 0 0 20%;  
+    
+    
+}
+
+
+@media screen and (max-width: 500px )  {
+    header{
+        position: fixed;
+        background-color: #630A10;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 80% 20%;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
     }
-    footer .logo  p{
-        color: rgb(89, 88, 88);
-        margin: 10% 0 0 30%; 
-        font-size: 0.8em;
-    }
-    footer .work 
+    header a .logo
     {
-        width: 40%;
+        position: relative;
+        z-index: 1000;
     }
-    footer .work h1{
-        color: rgb(89, 88, 88);
-        padding: 2px;
-        margin:8% 0 0 15%;
-        font-size: 0.9em;
-    }
-    footer .work p{
-        color: rgb(89, 88, 88);
-        padding: 2px;
-        margin:2% 0 0 15%;
-    }
-    footer .social {
-        width: 30%;
-        
-    }
-    footer .social input[type=search]{
-      display: none;
-    }
-    footer .social .social-links{
-        margin:10% 0 0 45%;
-        display: flex;
+    header nav{
+        display:none;
+        position: absolute;
+        background-color: #630A10;
+        width: 100%;
+        height:350px;
+        left:0;
+        top:0;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+    }
+    header .menu{
+        display: block;
+        font-size: 2.5rem;
+        margin:15px;
+        color: rgba(255, 255, 255, 0.645);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    header .menu:hover{
+        transform: rotate(44deg);
+        transition: 0.3s;
+    }
+    header .close{
+        display: none;
+        font-size: 2.5rem;
+        margin:15px;
+        font-weight: 700;
+        color: white;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    header .close:hover{
+        transform: rotate(43deg);
+        transition: 0.3s;
+    }
+    main .header-banner .txt
+    {
+    width: 80%;
+    height: 300px;
+   transform: translate(0%,25%);
+   text-align: center;
+   margin: 0 0 0 30px;
+   }
+   main .header-banner .txt h1{
+   
+    color:#FFB200;
+    font-size: 4rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt h3{
+       
+    color:white;
+    font-size: 3rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    
+     }
+    main .header-banner .txt p{
+    color:white;
+    font-size: 1rem;
+    font-family:sans-serif;
+    line-height: 25px;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt button{
+        background-color: #FACE7F;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0 0 0;
+        width: 40%;
+        letter-spacing: 2px;
+        box-shadow: 0 0 10px black;
     } 
-    footer .social .social-links img{
-        width: 30%;
-        background-color: rgb(89, 88, 88);
-        padding: 0px;
-        margin: 5px;
-    }
-    footer hr{
-        height: 60%;
-        opacity: 0.2;
-    }
+  
    
   
 }
-
-
-/*-------------------------------------------------------------------------------------------- media queries for i pad  ---------------------------------------------------------------------------------------------------------------------*/
-
-
-@media only screen and (min-width: 730px) and (max-width: 1200px) {
-    *{
-        box-sizing: border-box;
-        padding: 0;
-        margin: 0;
-        font-family: sans-serif;
-    }
-    header{
-        background-color: rgb(223, 194, 194);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-    }
-    header .logo img{
-        width:200px;
-        filter: none;
-    }
-    header nav .navlinks a{
-        font-size: 30px;
-        text-decoration: none;
-        margin: 20px;
-        color: #640028;
-        letter-spacing: 5px;
-    }
-    header nav .navlinks a:hover{
-        color: #FFB200;
-    }
-
-    /* main event */
-    main {
-        background-color:rgba(12, 0, 0, 0.891);
-        display: flex;
-        flex-direction: row;
-        display: flex;
-        flex-wrap: wrap;
-        z-index: 0;
-        
-    }
-    main .banner{
-        background-color:#640028 ;
-        clip-path: circle(180vh at 0% -80vh);
-        width: 100%;
-        height: 122vh;
-    }
-    main .banner .txt{
-      position: absolute;
-      color:#FFB200;
-      width: 500px;
-      height: 500px;
-      top:40%;
-      left:5%;
-    
-    }
-    main .banner .txt h1{
-     
-       font-family: pacifico;
-       font-size: 4em;
-    }
-    main .banner .txt h4{
-        
-        font-size: 2em;
-        line-height: 4em;
-    }
-    main .banner .txt p{
-        font-size: 1.5em;
-        color: white;
-    }
-    main  figure{
-        position: absolute;
-        top:80%;
-        left:60%;
+@media screen and (max-width: 414px ){
+    main .header-banner .txt
+    {
+    width: 80%;
+    height: 300px;
+   transform: translate(0%,50%);
+   text-align: center;
+   margin: 0 0 0 30px;
+   }
+   main .header-banner .txt h1{
+   
+    color:#FFB200;
+    font-size: 3rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt h3{
        
-    }
-    main  figure img{
-        width: 80%;
+    color:white;
+    font-size: 3rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    
+     }
+    main .header-banner .txt p{
+    color:white;
+    font-size: 1rem;
+    font-family:sans-serif;
+    line-height: 25px;
+    text-shadow: 0 0 10px black;
+    
+    } 
+    main .header-banner .txt button{
+        background-color: #FACE7F;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 50px 0 0 0;
+        width: 40%;
+        letter-spacing: 2px;
+        box-shadow: 0 0 10px black;
     }
     main .about{
-        height: 100%;
-    }
-    main .about  h1{
-        font-size: 6em;
-    }
-
-    main .about .detail{
-        flex-direction: column;
-        width: 80%;
-        height: 80%;
-        display: flex;  
-        padding: 0 0  0 0;
-    }
-    main .about .detail .txt{
+        background:linear-gradient(30deg ,#fcf0c8, white);
         width: 100%;
+        height: 100vh;
+      
     }
-    main .about .detail .txt p{
-        font-size: 0.6em;
-        margin: 0 0 0 20%;
-    }
-    main .about .detail .cafe-work {
-        margin: 40px 0 0 22%;
-    }
-    main .service {
-        text-align: center;
-        background-color: #640028;
-        width: 100%;
-        height: 100%;
-    }
-    main .service  h1{
-        color:white;
-        font-size: 6em;
-        padding: 20px  0 0 0 ;
-        font-family: pacifico;
-    }
-    main .service  .card-page{
-        display: flex;
-        align-items: center; 
-        flex-wrap: wrap;
-       
-    }
-    main .service  .card-page .page{
-        background: rgba(250, 249, 249, 0.45);
-        border-radius: 40px;
-        width: 80%;
-        height:auto;
-        box-shadow: inset 2px 2px 2px 2px  10px #640028;
-        margin: 15% 0 0 0;
-    }
-    main .service  .card-page .page h4{
-        padding: 20px 0 0 0;
-        font-size: 4em;
-        color:#FFB200 ;
-        background-size: cover ;
-        font-family: sans-serif;
-    }
-    main .service  .card-page .page p{
-        width: 90%;
-        opacity: 0.5;
-        font-size: 3em;
-        font-weight: 500;
-        align-items: center;
-        padding: 0 0 30px 0;
-        color: white;
-        text-shadow: 5px 5px 20px white;
-        font-family: sans-serif;
-     }
-     main .service  .card-page .page a{
-        background: black;
-        border-radius: 10px;
-        color:#FFB200;
-        text-decoration: none;
-        padding: 20px;
-        font-size: 2em;
-        
-    }
-    main .service  .card-page .page a:hover{
-        background:#FFB200 ;
+    main .about h1{
+        display: block;
+        padding: 50px 0 0 0;
+        font-size: 4rem;
         color: black;
+        text-align: center;
     }
-    main .contact form{
-        background:  url('../asset/bread.png') rgba(0, 0, 255, 0.494) center/cover no-repeat ;
-        background-blend-mode:multiply;
-        width: 80%;
-        height: 70vh;
-       margin: 5% 10% 5% 10%;
-       border-radius: 25px;
-    }
-    main .contact form input[type=email] , input[type=text], textarea, input[type = submit]{
-        width: 90%;
-        height: 80px;
-        margin: 5px;
-        font-size: 30px;
-        border-radius: 20px;
-        background: rgba(128, 128, 128, 0.275);
-        outline: none;
-        font-family: sans-serif;
-        border: none;
-        color:white;
-  
-    }
-    main .contact form textarea{
-        height: 50%;
-    }
-    footer{
-        width: 100%;
-        height: 40vh;
-        display: flex;
+    main .about .txt{
        
-    }
-    footer .logo{
-        width: 30%;
-    }
-    footer .logo img{
-        width: 60%;
-        filter: saturate(40%) invert(20%); 
-        margin: 0 0 0 20%;  
-    }
-    footer .logo  p{
-        color:rgb(89, 88, 88);
-        margin: 10% 0 0 30%; 
-        font-size: 2em;
-    }
-    footer .work 
-    {
         width: 40%;
+        margin: 10% 10% auto;    
     }
-    footer .work h1{
-        color: rgb(89, 88, 88);
-        padding: 2px;
-        margin:8% 0 0 15%;
-        font-size: 2em;
+    main .about .txt h2{
+        color: #630A10;
+        font-size: 2rem;
+        font-family: sans-serif;
+        line-height: 50px;
     }
-    footer .work p{
-        color: rgb(89, 88, 88);
-        padding: 2px;
-        margin:2% 0 0 15%;
-        font-size: 1em;
-    }
-    footer .social {
-        width: 30%;
+    main .about .cards
+    {
+        display: flex;
+       flex-direction: row;
         
     }
-    footer .social input[type=search]{
-      display: none;
+    main .about .txt
+    {
+        margin: 10px 0 0 60px;
     }
-    footer .social .social-links{
-        margin:10% 0 0 45%;
+    main .about .txt p{
+        color: black;
+        font-size: 0.8rem;
+        font-family: sans-serif;
+        line-height: 15px;
+        margin: 5px;
+        font-weight: 700;
+        opacity: 0.6;
+    
+    }
+    main .about .imggallery{
+        width: 40%;
+        height: 600px;
+        margin: 80px 0 0 0;
         display: flex;
         flex-direction: column;
-    } 
-    footer .social .social-links img{
+        flex-wrap: wrap;
+        transform: scale(1.3);
+    }
+    main .about .imggallery .gall{
         width: 30%;
-        background-color: rgb(89, 88, 88);
-        padding: 0px;
-        margin: 5px;
+        height: auto;
+        padding: 2px;
+        margin: 10px auto;
+        border-radius: 50px;
+        box-shadow: 0 5px 5px  black;
+        animation: gallary 5s  infinite;
     }
-    footer hr{
-        height: 60%;
-        opacity: 0.2;
+    main .service
+    {
+        background-color: #911F27;
+        width: 100%;
+        height: 320vh;
     }
-    
+    main .service h1{
+       display: block;
+       text-align: center;
+       color: white;
+       padding: 50px 0 50px 0;
+       font-size: 4rem;
+    }
+    main .service .cards{
+     display: flex;
+     flex-direction: column;
+    }
+    main .service .cards .card1{
+       background-color:#fcf0c8 ;
+       width: 100%;
+       height: 300px;
+       border-radius: 10px;
+       margin: 50px 0px auto;
+    }
+    main .service .cards .card1 h3{
+        font-size: 2rem;
+        padding: 10px 0 0 0;
+        text-align: center;
+        text-shadow: 0 0 2px black;
+    }
+    main .service .cards .card1 p{
+        font-size: 1.6rem;
+        padding: 12px 0 0 0;
+        text-align: center;
+        opacity: 0.8;
+    }
+    main .service .cards .card1 button{
+        background-color: #911F27;
+        width: 50%;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px 0 0 100px;
+        letter-spacing: 2px;
+    }
+    main .service .cards .card1 button:hover{
+        background-color: #333;
+        color: white;
+    }
+    main .contact{
+        background:linear-gradient(-210deg ,#630A10  100%, black 60%);
+        width: 100%;
+        height: 120vh;
+    }
+   
 }
+@media screen and (max-width: 375px ){
+    main .service
+    {
+        background-color: #911F27;
+        width: 100%;
+        height: 350vh;
+    }
+    main .service h1{
+       display: block;
+       text-align: center;
+       color: white;
+       padding: 50px 0 50px 0;
+       font-size: 4rem;
+    }
+    main .service .cards{
+     display: flex;
+     flex-direction: column;
+    }
+    main .service .cards .card1{
+       background-color:#fcf0c8 ;
+       width: 100%;
+       height: 300px;
+       border-radius: 10px;
+       margin: 50px 0px auto;
+    }
+    main .service .cards .card1 h3{
+        font-size: 2rem;
+        padding: 10px 0 0 0;
+        text-align: center;
+        text-shadow: 0 0 2px black;
+    }
+    main .service .cards .card1 p{
+        font-size: 1.6rem;
+        padding: 12px 0 0 0;
+        text-align: center;
+        opacity: 0.8;
+    }
+    main .service .cards .card1 button{
+        background-color: #911F27;
+        width: 50%;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px 0 0 100px;
+        letter-spacing: 2px;
+    }
+    main .service .cards .card1 button:hover{
+        background-color: #333;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 360px ){
+    main .header-banner .txt
+    {
+    width: 80%;
+    height: 300px;
+   transform: translate(0%,35%);
+   text-align: center;
+   margin: 0 0 0 30px;
+   }
+   main .header-banner .txt h1{
+   
+    color:#FFB200;
+    font-size: 3rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    }   
+    main .header-banner .txt h3{
+       
+    color:white;
+    font-size: 3rem;
+    font-family: pacifico;
+    text-shadow: 0 0 10px black;
+    
+     }
+    main .header-banner .txt p{
+    color:white;
+    font-size: 1rem;
+    font-family:sans-serif;
+    line-height: 25px;
+    text-shadow: 0 0 10px black;
+    
+    } 
+    main .header-banner .txt button{
+        background-color: #FACE7F;
+        color: white;
+        border:none;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0 0 0;
+        width: 40%;
+        letter-spacing: 2px;
+        box-shadow: 0 0 10px black;
+    }
+    main .about{
+        background:linear-gradient(30deg ,#fcf0c8, white);
+        width: 100%;
+        height: 150vh;
+      
+    }
+    main .about h1{
+        display: block;
+        padding: 50px 0 0 0;
+        font-size: 4rem;
+        color: black;
+        text-align: center;
+    }
+    main .about .txt{
+       
+        width: 40%;
+        margin: 10% 10% auto;    
+    }
+    main .about .txt h2{
+        color: #630A10;
+        font-size: 2rem;
+        font-family: sans-serif;
+        line-height: 50px;
+    }
+    main .about .cards
+    {
+        display: flex;
+       flex-direction: row;
+        
+    }
+    main .about .txt
+    {
+        margin: 10px 0 0 60px;
+    }
+    main .about .txt p{
+        color: black;
+        font-size: 0.8rem;
+        font-family: sans-serif;
+        line-height: 15px;
+        margin: 5px;
+        font-weight: 700;
+        opacity: 0.6;
+    
+    }
+    main .about .imggallery{
+        width: 40%;
+        height: 600px;
+        margin: 80px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        transform: scale(1.3);
+    }
+    main .about .imggallery .gall{
+        width: 30%;
+        height: auto;
+        padding: 2px;
+        margin: 10px auto;
+        border-radius: 50px;
+        box-shadow: 0 5px 5px  black;
+        animation: gallary 5s  infinite;
+    }
+    main .service
+{
+    background-color: #911F27;
+    width: 100%;
+    height: 400vh;
+}
+main .service h1{
+   display: block;
+   text-align: center;
+   color: white;
+   padding: 50px 0 50px 0;
+   font-size: 4rem;
+}
+main .service .cards{
+ display: flex;
+ flex-direction: column;
+}
+main .service .cards .card1{
+   background-color:#fcf0c8 ;
+   width: 100%;
+   height: 300px;
+   border-radius: 10px;
+   margin: 20px 0px auto;
+}
+main .service .cards .card1 h3{
+    font-size: 2rem;
+    padding: 10px 0 0 0;
+    text-align: center;
+    text-shadow: 0 0 2px black;
+}
+main .service .cards .card1 p{
+    font-size: 1.6rem;
+    padding: 12px 0 0 0;
+    text-align: center;
+    opacity: 0.8;
+}
+main .service .cards .card1 button{
+    background-color: #911F27;
+    width: 50%;
+    border:none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0 0 80px;
+    letter-spacing: 2px;
+}
+main .service .cards .card1 button:hover{
+    background-color: #333;
+    color: white;
+}
+main .contact{
+    background:linear-gradient(-210deg ,#630A10  100%, black 60%);
+    width: 100%;
+    height: 120vh;
+}
+main .contact .contactpage button{
+    width: 100%;
+    margin: 10% auto;
+}
+}
+
